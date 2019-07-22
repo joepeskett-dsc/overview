@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+
+	</head>
+	<body>
+		<div id="myLogo" style="background: url(dsc.PNG);
+		                        position: absolute;
+														background-size:cover;
+		                        bottom: 20px;
+		                        left: 20px;
+		                        width: 250px;
+		                        height: 75px;"></div>
+	    <div class="reveal">
+
+	        <div class="slides">
+							<section>
+									<h1> Apprentice Show and Tell</h1>
+									<p>
+										<small>Joe Peskett</small>
+									</p>
+							</section>
+	            <section data-markdown>
+								<textarea data-template>
+									### Project highlights
+
+									* CityProfileR
+									* Tron - bandwidth
+									* Most of the work is in R
+										* Creating packages
+										* Creating shiny apps
+								</textarea>
+	            </section>
+
+	            <section>
+								<section>
+	                <h1>CityProfileR App</h1>
+	                <h4>Prototype tool for visualising the Urban Forest data in an interactive way</h4>
+	            	</section>
+									<section data-markdown>
+										<textarea data-template>
+											## Aim
+
+											* App that allows interaction with the data
+											* Use at different levels of geography; street, parish, LSOA etc
+											* Some way to compare your street to another street
+
+											Prototype tool only used Cardiff.
+										</textarea>
+									</section>
+									<section data-markdown>
+										<textarea data-template>
+											#### Polygons
+											![polygons](images-tree/polygons.PNG)
+										</textarea>
+									</section>
+									<section data-markdown>
+										<textarea data-template>
+											#### Markers
+											![markers](images-tree/markers.PNG)
+										</textarea>
+									</section>
+									<section data-markdown>
+										<textarea data-template>
+											#### More Markers!
+											![street](images-tree/street_light.PNG)
+										</textarea>
+									</section>
+									<section data-markdown>
+										<textarea data-template>
+											#### Hex maps!
+											![street](images-tree/hex.PNG)
+										</textarea>
+									</section>
+								</section>
+
+	            <section>
+								<section>
+	                <h2>CityProfileR Package</h2>
+	            	</section>
+								<section data-markdown>
+									<textarea data-template>
+										## CityProfileR
+
+										* Currently holds the point, polygon and hexmap objects required for the shiny app
+										* It also contains any functions specific to visualising or subsetting the tree data
+										* Data manipulation function are taken out of the package, but are available in a single script in the repo
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										#### CityProfileR
+										![pkg](images-tree/cityprofiler_pkg.PNG)
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										#### CityProfileR
+										<img src="images-tree/tree_road_shape.PNG" alt="drawing" width="558"/>
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										#### CityProfileR
+										![roxygen](images-tree/roxygen.PNG)
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										## CityProfileR Demo
+
+										[Hosted on datasciencecampus.shinyapps.io](https://datasciencecampus.shinyapps.io/cardiff_app/)
+									</textarea>
+								</section>
+							</section>
+
+	            <section>
+								<section>
+	                <h1>Tron:</h1>
+									<h3>Detecting collective human behaviour in internet bandwidth consumption data</h3>
+	                <p></p>
+								</section>
+									<section data-markdown>
+										<textarea data-template>
+										## Overview
+
+										* ~3 years of recording from 5 IXPs around the UK
+										* Records total internet traffic in 5 minute intervals
+										* Is human behaviour present and is it useful?
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+									#### Overview
+
+									<img src="images-ixp/overview.png" alt="drawing" width="558"/>
+
+								</textarea>
+							</section>
+							<section data-markdown>
+								<textarea data-template>
+									#### Afternoon peaks
+									<img src="images-ixp/proof_plot_030816.png" alt="drawing" width="558"/>
+								</textarea>
+							</section>
+							<section data-markdown>
+								<textarea data-template>
+									#### Afternoon peaks
+									<img src="images-ixp/peak_box.png" alt="drawing" width="558"/>
+								</textarea>
+							</section>
+							<section data-markdown>
+								<textarea data-template>
+									#### Afternoon peaks
+									<img src="images-ixp/win_1_box.png" alt="drawing" width="558"/>
+								</textarea>
+							</section>
+							<section data-markdown>
+								<textarea data-template>
+									#### Afternoon peaks
+									<img src="images-ixp/confetti.png" alt="drawing" width="558"/>
+								</textarea>
+							</section>
+								<section data-markdown>
+									<textarea data-template>
+										## Morning Wake Up
+
+										* Are there differences in the speed of increase in internet consumption between days?
+										* Developed a **very** crude method to measure this rate each day.
+										* How long does it take to reach 2x the trough measure each day?
+										* Fill in the gaps with other thresholds
+										* Calculate a set of gradients and the ratio between these gradients
+										* Find some interesting anomalies
+
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										#### Morning Wake up
+										<img src="images-ixp/morning_030816.png" alt="drawing" width="800"/>
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										##### Is the rate dependent on trough depth
+										![no_link_proof](images-ixp/no_link_proof.png)
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										#### Comparison of gradients
+										![grad_comparison](images-ixp/comp_grad_12_34_lon1.png)
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										#### What is this outlier?
+										![outlier](images-ixp/basic_14_06_17.png)
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										#### Is this present in Lon2?
+										![outlier_2](images-ixp/basic2_14_06_17.png)
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										### Decomposition and Anomaly Detection
+
+										* Could hopefully be used to identify anomalies through deviation from the forecast.
+										* Multiple, complex seasonalities proved difficult to model.
+										* Regression tree, Singular Spectrum Analysis, LSTM used.
+										* SSA is very promising, Phil has focussed more on this.
+
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										### LSTM
+
+										* A form of recurrent neural network that allows memory of long term dependencies
+										* Studies have looked at using this method: [Uber](https://eng.uber.com/neural-networks/), [Thesis](http://www.diva-portal.org/smash/get/diva2:1149130/FULLTEXT01.pdf)
+										* Not optimised but developed a working pipeline to work with the data in Keras
+										* Cross validation is also a challenge with timeseries data
+
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										### LSTM - Implementation in Keras
+
+										* Requires 3D input array: features, sequences, observation
+											* Lag the X input
+											* Only one feature
+										* Select a batch size
+										* Architecture - simple as possible
+										* Stateful layers but reset after each epoch
+
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										### LSTM - Implementation in Keras
+
+										![Architecture](images-ixp/architecture.PNG)
+
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										### LSTM
+
+										![design](images-ixp/regresso_fit.PNG)
+										![models](images-ixp/saving_models.PNG)
+									</textarea>
+								</section>
+									<section data-markdown>
+									<textarea data-template>
+										### LSTM Results
+										RMSE came back as 94827, which given the scale of the data isn't bad.
+
+										![lstm](images-ixp/lstm_plot.png)
+
+										*Remember this is a basic model!*
+									</textarea>
+								</section>
+								<section data-markdown>
+								<textarea data-template>
+									### LSTM Error Detect
+
+									![lstm](images-ixp/errror_graph.PNG)
+
+								</textarea>
+							</section>
+							<section data-markdown>
+							<textarea data-template>
+								### LSTM Error Detect
+
+								![lstm](images-ixp/error_calc.PNG)
+
+							</textarea>
+						</section>
+								<section data-markdown>
+									<textarea data-template>
+										## Traffic Comparison
+
+										* Already considered that the afternoon dip maybe indicator of commuting time
+										* Big data team recently presented on traffic data as lagged indicator of GDP
+										* Can internet traffic be used as an indicator for road traffic
+
+
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										## Traffic Comparison
+
+
+										![traffic](images-ixp/manc_2016.png)
+									</textarea>
+								</section>
+	            </section>
+						<section data-markdown>
+							<textarea data-template>
+								## Learning Points
+
+								* Writing code that someone else can read
+								* Writing code that is not horribly inefficient
+								* Running an exploratory data analysis
+								* Preparing a project for open-sourcing and publishing.
+								* How present using reveal.js
+							</textarea>
+						</section>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Thanks!
+
+							Any questions or thoughts?
+
+							Presentation made using reveal.js
+						</textarea>
+					</section>
+	        </div>
+	    </div>
+			<script src="lib/js/head.min.js"></script>
+			<script src="js/reveal.js"></script>
+			<script src="plugin/markdown/marked.js"></script>
+			<script src="plugin/markdown/markdown.js"></script>
+			<script>
+				<!--// More info about config & dependencies:
+				// - https://github.com/hakimel/reveal.js#configuration
+				// - https://github.com/hakimel/reveal.js#dependencies-->
+					Reveal.initialize({
+					dependencies: []
+				});
+			</script>
+		</body>
+		</html>

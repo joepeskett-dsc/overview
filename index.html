@@ -172,188 +172,24 @@
 										* Natural Language Processing
 
 								</textarea>
-							</section>
-							<section data-markdown>
-								<textarea data-template>
-									#### Afternoon peaks
-									<img src="images-ixp/proof_plot_030816.png" alt="drawing" width="558"/>
-								</textarea>
-							</section>
-							<section data-markdown>
-								<textarea data-template>
-									#### Afternoon peaks
-									<img src="images-ixp/peak_box.png" alt="drawing" width="558"/>
-								</textarea>
-							</section>
-							<section data-markdown>
-								<textarea data-template>
-									#### Afternoon peaks
-									<img src="images-ixp/win_1_box.png" alt="drawing" width="558"/>
-								</textarea>
-							</section>
-							<section data-markdown>
-								<textarea data-template>
-									#### Afternoon peaks
-									<img src="images-ixp/confetti.png" alt="drawing" width="558"/>
-								</textarea>
-							</section>
-								<section data-markdown>
-									<textarea data-template>
-										## Morning Wake Up
-
-										* Are there differences in the speed of increase in internet consumption between days?
-										* Developed a **very** crude method to measure this rate each day.
-										* How long does it take to reach 2x the trough measure each day?
-										* Fill in the gaps with other thresholds
-										* Calculate a set of gradients and the ratio between these gradients
-										* Find some interesting anomalies
-
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										#### Morning Wake up
-										<img src="images-ixp/morning_030816.png" alt="drawing" width="800"/>
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										##### Is the rate dependent on trough depth
-										![no_link_proof](images-ixp/no_link_proof.png)
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										#### Comparison of gradients
-										![grad_comparison](images-ixp/comp_grad_12_34_lon1.png)
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										#### What is this outlier?
-										![outlier](images-ixp/basic_14_06_17.png)
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										#### Is this present in Lon2?
-										![outlier_2](images-ixp/basic2_14_06_17.png)
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										### Decomposition and Anomaly Detection
-
-										* Could hopefully be used to identify anomalies through deviation from the forecast.
-										* Multiple, complex seasonalities proved difficult to model.
-										* Regression tree, Singular Spectrum Analysis, LSTM used.
-										* SSA is very promising, Phil has focussed more on this.
-
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										### LSTM
-
-										* A form of recurrent neural network that allows memory of long term dependencies
-										* Studies have looked at using this method: [Uber](https://eng.uber.com/neural-networks/), [Thesis](http://www.diva-portal.org/smash/get/diva2:1149130/FULLTEXT01.pdf)
-										* Not optimised but developed a working pipeline to work with the data in Keras
-										* Cross validation is also a challenge with timeseries data
-
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										### LSTM - Implementation in Keras
-
-										* Requires 3D input array: features, sequences, observation
-											* Lag the X input
-											* Only one feature
-										* Select a batch size
-										* Architecture - simple as possible
-										* Stateful layers but reset after each epoch
-
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										### LSTM - Implementation in Keras
-
-										![Architecture](images-ixp/architecture.PNG)
-
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										### LSTM
-
-										![design](images-ixp/regresso_fit.PNG)
-										![models](images-ixp/saving_models.PNG)
-									</textarea>
-								</section>
-									<section data-markdown>
-									<textarea data-template>
-										### LSTM Results
-										RMSE came back as 94827, which given the scale of the data isn't bad.
-
-										![lstm](images-ixp/lstm_plot.png)
-
-										*Remember this is a basic model!*
-									</textarea>
-								</section>
-								<section data-markdown>
-								<textarea data-template>
-									### LSTM Error Detect
-
-									![lstm](images-ixp/errror_graph.PNG)
-
-								</textarea>
-							</section>
-							<section data-markdown>
-							<textarea data-template>
-								### LSTM Error Detect
-
-								![lstm](images-ixp/error_calc.PNG)
-
-							</textarea>
-						</section>
-								<section data-markdown>
-									<textarea data-template>
-										## Traffic Comparison
-
-										* Already considered that the afternoon dip maybe indicator of commuting time
-										* Big data team recently presented on traffic data as lagged indicator of GDP
-										* Can internet traffic be used as an indicator for road traffic
-
-
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										## Traffic Comparison
-
-
-										![traffic](images-ixp/manc_2016.png)
-									</textarea>
-								</section>
-	            </section>
+							</section>	
+	          </section>
 						<section data-markdown>
 							<textarea data-template>
 								## Learning Points
 
-								* Writing code that someone else can read
-								* Writing code that is not horribly inefficient
-								* Running an exploratory data analysis
-								* Preparing a project for open-sourcing and publishing.
-								* How present using reveal.js
+								* There are a wide variety of skills of tools
+								* Most individuals won't have all of these
+								* There is constant change and innovation
 							</textarea>
 						</section>
-					</section>
 					<section data-markdown>
 						<textarea data-template>
 							## Thanks!
 
 							Any questions or thoughts?
+							
+							Any other topics that would be useful?
 
 							Presentation made using reveal.js
 						</textarea>
